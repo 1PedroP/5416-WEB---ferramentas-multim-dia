@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Css/hero.css">
+        <title>Hero Page</title>
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <img src="Imagens/coca_cola_logo.jpg" alt="Coca Cola Logo" class="logo">
+        </header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="hero_page.html" class="nav-link">Coca Cola Page</a>
+            <a href="404.html" class="nav-link link-404">404</a>
+
+<!-- Lottie separado do link -->
+<dotlottie-player
+  id="lottie-hover"
+  src="https://lottie.host/ab8d321f-779b-450a-b27e-2f14041179a0/LnMZUIecLB.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 180px; height: 180px; position: absolute; top: 100px;left:100%; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity 0.3s;"
+  loop
+  autoplay
+></dotlottie-player>
+        </nav>
+        <h2 class="slogan">Coca Cola <br>Taste that feeling</h2>
+        <img src="Imagens/lata1.png" alt="Lata de Coca Cola" class="lata1">
+        <img src="Imagens/gelo.png" alt="Cubos de gelo" class="cubos_gelo">
+        <img src="Imagens/mesa_coca_cola.jpeg" alt="Mesa com Coca Cola" class="mesa_coca_cola">
+
+        <section class="produtos">
+            <h2 class="produtosh2">Produtos da Coca Cola</h2>
+            <div class="grelha-svgs">
+                <img src="Imagens/Coca-Cola.svg" alt="Imagem do logo da Coca Cola em Svg" class="imagem-grelha">
+                <img src="Imagens/fanta.png" alt="Imagem do logo da fanta" class="imagem-grelha">
+                <img src="Imagens/sprite.png" alt="Imagem do logo da sprite" class="imagem-grelha">
+                <img src="Imagens/fuze_tea.png" alt="Imagem do logo da fuse tea" class="imagem-grelha">
+                <img src="Imagens/royal_bliss.png" alt="Imagem do logo da royal bliss" class="imagem-grelha">
+                <img src="Imagens/Aquarius-Logo.jpg" alt="Imagem do logo da aquarius" class="imagem-grelha">
+                <img src="Imagens/power_ade.png" alt="Imagem do logo da power ade" class="imagem-grelha">
+            </div>
+        </section>
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const link404 = document.querySelector('.link-404');
+    const lottie = document.getElementById('lottie-hover');
+
+    if (link404 && lottie) {
+      link404.addEventListener('mouseenter', () => {
+        lottie.style.opacity = '1';
+      });
+
+      link404.addEventListener('mouseleave', () => {
+        lottie.style.opacity = '0';
+      });
+    }
+  });
+</script>
+
+   
+ <footer class="footer-coca">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="Imagens/coca_cola_logo.jpg" alt="Coca-Cola Logo">
+    </div>
+    <div class="footer-links">
+      <a href="#">Sobre</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+      <a href="#">Política de Privacidade</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Pedro Parreira. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

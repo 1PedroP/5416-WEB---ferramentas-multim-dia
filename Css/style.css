@@ -1,0 +1,220 @@
+:root {
+    --clr: #ff3c00; /* cor principal para efeitos (ex: laranja Coca-Cola) */
+    --bg-main: #111;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Área principal centralizada */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card principal */
+.card {
+    position: relative;
+    width:350px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease, height 0.5s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    width: 100vw;
+    max-width: 100vw;
+    height: 600px;
+    z-index: 10;
+}
+
+/* Círculo interno decorativo */
+.card .circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #191919;
+    border-radius: 50%;
+    border: 8px solid var(--clr);
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    transition: all 0.5s ease;
+    transition-delay: 0.75s;
+}
+
+.card:hover .circle::before {
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    background: var(--clr);
+    transition-delay: 0.5s;
+}
+
+.card .circle .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+    transition: 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover .circle .logo {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Imagem central */
+.card .cocacola-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+    height: 300px;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .cocacola-image {
+    top: 25%;
+    left: 72%;
+    height: 500px;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+}
+
+/* Conteúdo do card */
+.card .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: 0.5s ease;
+}
+
+.card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.75s;
+}
+
+
+.card .content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.card .content p {
+    color: #f0f0f0;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    position: relative;
+    z-index: 4; /* aumenta o z-index para ficar acima da imagem */
+    padding: 0.5em 1em;
+    border-radius: 8px;
+}
+
+.card .content a {
+    margin-top: 2em;
+    color: black;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: block;
+    text-align: center;
+}
+
+.card .content a:hover {
+    background: #ddd;
+}
+
+.cartah1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #888;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.lottie-click {
+    margin-top: 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* importante para permitir clicar no botão abaixo */
+    z-index: 3;
+    opacity: 0; /* Inicia escondido */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave */
+}
+
+.card:hover .lottie-click {
+    transition-delay: 0.5s; /* Espera o hover do card */
+    opacity: 1; /* Mostra no hover do card */
+}
+
+.logo {
+    border-radius: 25px;
+}
