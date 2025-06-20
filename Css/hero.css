@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+     background-color: black;
+    background:url('../Imagens/cocacola_bg.jpg') no-repeat center center fixed;
+    
+}
+
+.logo{
+    width: 15%;
+    border-radius: 300px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Adicionado para garantir que o nav fique acima dos outros elementos */
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(246,118,116,0.18), 0 2px 8px rgba(0,0,0,0.10);
+    background: linear-gradient(60deg, #f67674 0%, #ec5b5b 100%);
+    margin-top: 2%;
+    border: 2px solid #df2724;
+}
+
+
+nav a {
+    font-family:Arial, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin: 0 11px;
+    cursor:grab;
+
+}
+
+nav a:hover {
+    background-color: #e81411;
+    text-decoration:solid
+  
+}
+.slogan {
+    margin-left: 8%;
+    margin-top: 48px;
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.35), 0 1px 2px rgba(246,118,116,0.15);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.slogan:hover {
+    color: #df2724;
+    text-decoration: underline;
+    transform: rotate3d(0, 1, 0, 360deg);
+    
+}
+
+.lata1 {
+    display: block;
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    margin: 2.5% ;
+    border-radius: 18px;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+
+.lata1:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 12px 36px rgba(246,118,116,0.25), 0 2px 8px rgba(0,0,0,0.22);
+    background: linear-gradient(135deg, #f67674 0%, #232526 100%);
+}
+.cubos_gelo{
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    max-width: 90%;
+    height: auto;
+    margin-top: -10%;
+    margin-left: 18%;
+    border-radius: 18px;
+   
+    
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.cubos_gelo:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 12px 36px rgba(246,118,116,0.25), 0 2px 8px rgba(0,0,0,0.22);
+    background: linear-gradient(135deg, #f67674 0%, #232526 100%);
+}
+.mesa_coca_cola {
+    display: inline-block;
+    vertical-align: top;
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+    margin-top: -30%;
+    margin-left: 35%;
+    border-radius: 18px;
+    transition: transform 0.6s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    animation: mesaBounce 2.5s infinite alternate;
+}
+
+@keyframes mesaBounce {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2px 8px rgba(246,118,116,0.15);
+    }
+    50% {
+        transform: translateY(-18px) scale(1.03);
+        box-shadow: 0 16px 36px rgba(246,118,116,0.25);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2px 8px rgba(246,118,116,0.15);
+    }
+}
+
+.produtosh2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px  20px;
+    border-radius: 10px;
+}
+.produtosh2:hover {
+    background: linear-gradient(to right,  #f67674, red);
+    color: white;}
+
+.grelha-svgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 80px 80px; /* aumentou o espaçamento entre linhas e colunas */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.grelha-svgs img {
+    width: 290px; /* aumentado */
+    height: 280px; /* aumentado */
+    padding: 50px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.grelha-svgs img:hover {
+    transform: scale(1.05);
+}
+
+.footer-coca {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #b80000, #ff1c1c);
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    width:auto;
+}
+
+.footer-container {
+    max-width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffe600;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+
+.link-404 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    text-decoration: none;
+    color: #b80000;
+    font-weight: bold;
+}
+
+.lottie-hover {
+    width: 20%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.link-404:hover .lottie-hover {
+    opacity: 1;
+}
